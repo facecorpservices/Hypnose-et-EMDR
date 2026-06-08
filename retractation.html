@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rétractation | Julien Clermont Hypnose EMDR</title>
+  <meta name="description" content="Formulaire de rétractation pour les contrats conclus en ligne avec le cabinet Julien Clermont à Ploufragan.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="author" content="Julien Clermont">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Accueil du cabinet">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>Hypnose &amp; EMDR</strong>
+          <span>Cabinet à Ploufragan</span>
+        </span>
+      </a>
+      <nav class="primary-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="le-cabinet.html">Le cabinet</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="horaires-et-contact.html">Horaires &amp; contact</a>
+        <a href="le-blog.html">Le blog</a>
+      </nav>
+    </div>
+    <div class="subnav-wrap">
+      <nav class="subnav" aria-label="Accompagnements">
+        <a href="cabinet/hypnose-enfant-et-adolescent.html">Enfant &amp; adolescent</a>
+        <a href="cabinet/hypnose-eriksonienne.html">Hypnose ericksonienne</a>
+        <a href="cabinet/emdr.html">EMDR</a>
+        <a href="cabinet/photostimulation.html">Photostimulation</a>
+        <a href="cabinet/pnl.html">PNL</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Rétractation</p>
+      <h1>Rétracter le contrat</h1>
+      <p class="lead">Vous pouvez avoir le droit de vous rétracter des contrats conclus en ligne dans un délai de 14 jours. Veuillez remplir le formulaire ci-dessous. Vous recevrez immédiatement un accusé de réception par e-mail.</p>
+    </section>
+
+    <section class="form-section">
+      <form class="retractation-form" action="mailto:cabinet.jclermont@gmail.com" method="post" enctype="text/plain" onsubmit="return validateHumanCheck(event)">
+        <label for="withdraw-name">Ton nom</label>
+        <input id="withdraw-name" name="Nom" type="text" autocomplete="name">
+
+        <label for="withdraw-email">Votre adresse e-mail*</label>
+        <p class="field-help">Votre accusé de réception sera envoyé à cette adresse.</p>
+        <input id="withdraw-email" name="Adresse e-mail" type="email" autocomplete="email" required>
+
+        <label for="withdraw-order">Numéro de commande ou de réservation*</label>
+        <p class="field-help">Vous le trouverez dans votre e-mail de confirmation de commande.</p>
+        <input id="withdraw-order" name="Numéro de commande ou de réservation" type="text" required>
+
+        <label for="withdraw-items">Quel(s) article(s) souhaitez-vous rétracter ?</label>
+        <p class="field-help">Laissez vide pour vous rétracter du contrat dans son intégralité. Si vous souhaitez vous rétracter d'une partie de votre commande seulement, indiquez les articles ici.</p>
+        <textarea id="withdraw-items" name="Articles concernés"></textarea>
+
+        <label for="withdraw-reason">Motif de la rétractation</label>
+        <textarea id="withdraw-reason" name="Motif de la rétractation"></textarea>
+
+        <label for="human-check">Validation humain*</label>
+        <p class="field-help">Pour confirmer que vous êtes une personne, répondez à cette question: combien font 3 + 4 ?</p>
+        <input id="human-check" name="Validation humain" type="number" inputmode="numeric" required>
+        <p class="form-error" id="human-error" aria-live="polite"></p>
+
+        <label class="consent">
+          <input type="checkbox" name="Consentement RGPD" required>
+          <span>J'accepte que les informations transmises soient utilisées uniquement pour traiter ma demande de rétractation.</span>
+        </label>
+
+        <button class="button" type="submit">Envoyer la demande</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Cabinet d'hypnose &amp; EMDR - Ploufragan</span>
+      <span><a href="retractation.html">Rétractation</a> · Confidentialité · Respect du cadre RGPD</span>
+    </div>
+  </footer>
+
+  <script>
+    function validateHumanCheck(event) {
+      var input = document.getElementById("human-check");
+      var error = document.getElementById("human-error");
+      if (!input || Number(input.value) === 7) {
+        if (error) {
+          error.textContent = "";
+        }
+        return true;
+      }
+      event.preventDefault();
+      if (error) {
+        error.textContent = "La validation humain est incorrecte. Merci d'indiquer la bonne réponse.";
+      }
+      input.focus();
+      return false;
+    }
+  </script>
+  <a class="whatsapp-pop" href="https://api.whatsapp.com/send/?phone=33780991214&amp;text=&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener" aria-label="Contacter le cabinet sur WhatsApp">
+    <img src="assets/images/whatsapp-icon.svg" width="32" height="32" alt="">
+    <span>WhatsApp</span>
+  </a>
+</body>
+</html>
