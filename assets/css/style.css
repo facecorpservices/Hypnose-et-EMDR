@@ -57,11 +57,11 @@ h3 {
 
 h1 {
   max-width: 760px;
-  font-size: clamp(2.45rem, 7vw, 5.7rem);
+  font-size: clamp(2.1rem, 5vw, 4.35rem);
 }
 
 h2 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
 }
 
 h3 {
@@ -280,7 +280,8 @@ h3 {
 
 .hero-media img {
   aspect-ratio: 16 / 11;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fffdf8;
 }
 
 .focus-rings {
@@ -577,6 +578,10 @@ li {
   font-weight: 800;
 }
 
+.price-card h2 {
+  font-size: 1.28rem;
+}
+
 .tag {
   display: inline-flex;
   min-height: 30px;
@@ -846,6 +851,28 @@ textarea {
   font-weight: 750;
 }
 
+.reviews-marquee {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+
+.reviews-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: reviews-scroll 36s linear infinite;
+}
+
+.reviews-track .review-card {
+  width: min(360px, calc(100vw - 54px));
+}
+
+.reviews-marquee:hover .reviews-track {
+  animation-play-state: paused;
+}
+
 .google-widget-slot {
   grid-column: 1 / -1;
   min-height: 90px;
@@ -859,6 +886,117 @@ textarea {
 
 .google-widget-slot:empty::before {
   content: "Emplacement widget Google Reviews";
+}
+
+.video-embed {
+  display: grid;
+  gap: 16px;
+}
+
+.video-launch,
+.video-frame,
+.video-embed iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video-launch {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  color: #fffdf8;
+  background: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  text-align: left;
+}
+
+.video-launch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.74;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.video-launch:hover img {
+  transform: scale(1.03);
+  opacity: 0.56;
+}
+
+.video-launch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 28%, rgba(38, 49, 45, 0.78));
+}
+
+.play-icon {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  z-index: 1;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: rgba(255, 253, 248, 0.94);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 18px 42px rgba(38, 49, 45, 0.28);
+}
+
+.play-icon::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 23px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 20px solid var(--clay);
+}
+
+.video-copy {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 22px;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+}
+
+.video-copy strong {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  line-height: 1.1;
+}
+
+.video-copy small,
+.video-fallback {
+  font-size: 0.94rem;
+}
+
+.video-fallback {
+  color: var(--muted);
+}
+
+.video-fallback a {
+  color: var(--sage-dark);
+  font-weight: 750;
+}
+
+.video-embed iframe {
+  display: block;
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #fffdf8;
+}
+
+.video-embed .button {
+  width: fit-content;
 }
 
 .cta-band {
@@ -925,37 +1063,6 @@ textarea {
   border-radius: 50%;
 }
 
-.whatsapp-pop {
-  position: fixed;
-  left: 18px;
-  bottom: 18px;
-  z-index: 31;
-  min-height: 54px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px 10px 11px;
-  border-radius: 999px;
-  color: #fffdf8;
-  background: #1fae5b;
-  box-shadow: 0 14px 34px rgba(38, 49, 45, 0.22);
-  font-weight: 800;
-  text-decoration: none;
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
-}
-
-.whatsapp-pop:hover {
-  transform: translateY(-2px);
-  background: #178f4a;
-  box-shadow: 0 18px 42px rgba(38, 49, 45, 0.28);
-}
-
-.whatsapp-pop img {
-  width: 34px;
-  height: 34px;
-  flex: 0 0 34px;
-}
-
 @keyframes slow-breathe {
   0%,
   100% {
@@ -985,6 +1092,15 @@ textarea {
   }
   50% {
     left: calc(100% - 14px);
+  }
+}
+
+@keyframes reviews-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 7px));
   }
 }
 
@@ -1072,7 +1188,7 @@ textarea {
   }
 
   h1 {
-    font-size: clamp(2.1rem, 15vw, 3.35rem);
+    font-size: clamp(1.9rem, 12vw, 2.85rem);
   }
 
   .section {
@@ -1083,28 +1199,16 @@ textarea {
     padding: 28px 22px;
   }
 
-  .whatsapp-pop {
-    width: 58px;
-    height: 58px;
-    min-height: 58px;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .whatsapp-pop span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
-
   .focus-rings {
     right: 12px;
     bottom: -34px;
     width: 132px;
     height: 132px;
+  }
+
+  .reviews-marquee {
+    width: min(100% - 22px, var(--max));
+    mask-image: none;
   }
 }
 
@@ -1116,5 +1220,9 @@ textarea {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.001ms !important;
+  }
+
+  .reviews-track {
+    animation: none;
   }
 }

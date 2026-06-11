@@ -2,61 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.hypnosejulienclermont.bzh/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.hypnosejulienclermont.bzh/le-cabinet.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.hypnosejulienclermont.bzh/cabinet/hypnose-enfant-et-adolescent.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.hypnosejulienclermont.bzh/cabinet/hypnose-eriksonienne.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.hypnosejulienclermont.bzh/cabinet/emdr.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.hypnosejulienclermont.bzh/cabinet/photostimulation.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://www.hypnosejulienclermont.bzh/cabinet/arret-du-tabac.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.hypnosejulienclermont.bzh/cabinet/pnl.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.hypnosejulienclermont.bzh/tarifs.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.hypnosejulienclermont.bzh/horaires-et-contact.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.hypnosejulienclermont.bzh/le-blog.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
