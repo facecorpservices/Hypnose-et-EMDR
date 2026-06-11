@@ -695,148 +695,18 @@ textarea {
   text-transform: uppercase;
 }
 
-.youtube-wrap {
-  width: min(var(--max), calc(100% - 32px));
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
-  gap: 18px;
-}
-
-.youtube-summary,
-.video-card {
+.review-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: rgba(255, 253, 248, 0.9);
   box-shadow: 0 16px 34px rgba(38, 49, 45, 0.08);
 }
 
-.youtube-summary {
-  display: grid;
-  align-content: start;
-  gap: 14px;
-  padding: 24px;
-}
-
-.youtube-summary p,
-.video-card p {
-  color: var(--muted);
-}
-
-.youtube-badge {
-  width: fit-content;
-  min-height: 30px;
-  display: inline-flex;
-  align-items: center;
-  padding: 5px 10px;
-  border-radius: 999px;
-  color: #fffdf8;
-  background: #d7362f;
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.video-card {
-  overflow: hidden;
-}
-
-.video-thumb {
-  position: relative;
-  display: block;
-  aspect-ratio: 16 / 9;
-  background:
-    linear-gradient(135deg, rgba(73, 110, 91, 0.88), rgba(96, 127, 153, 0.84)),
-    url("../images/motif-bilateral.png") center / cover;
-}
-
-.video-thumb span {
-  position: absolute;
-  inset: 50% auto auto 50%;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: rgba(255, 253, 248, 0.94);
-  transform: translate(-50%, -50%);
-  box-shadow: 0 14px 30px rgba(38, 49, 45, 0.2);
-}
-
-.video-thumb span::before {
-  content: "";
-  position: absolute;
-  left: 23px;
-  top: 18px;
-  width: 0;
-  height: 0;
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
-  border-left: 16px solid var(--clay);
-}
-
-.reviews-wrap {
-  width: min(var(--max), calc(100% - 32px));
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
-  gap: 18px;
-}
-
-.reviews-summary,
-.review-card,
-.google-widget-slot {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(255, 253, 248, 0.9);
-  box-shadow: 0 16px 34px rgba(38, 49, 45, 0.08);
-}
-
-.reviews-summary {
-  display: grid;
-  align-content: start;
-  gap: 14px;
-  padding: 24px;
-}
-
-.reviews-summary strong,
 .review-stars {
   color: var(--gold);
   font-size: 1.28rem;
   line-height: 1;
   letter-spacing: 0.08em;
-}
-
-.google-badge {
-  width: fit-content;
-  min-height: 30px;
-  display: inline-flex;
-  align-items: center;
-  padding: 5px 10px;
-  border-radius: 999px;
-  color: #fffdf8;
-  background: linear-gradient(135deg, #4285f4, #34a853 38%, #fbbc05 68%, #ea4335);
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-.reviews-summary p,
-.review-card p,
-.google-widget-slot {
-  color: var(--muted);
-}
-
-.reviews-note {
-  font-size: 0.86rem;
-}
-
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
 }
 
 .review-card {
@@ -871,21 +741,6 @@ textarea {
 
 .reviews-marquee:hover .reviews-track {
   animation-play-state: paused;
-}
-
-.google-widget-slot {
-  grid-column: 1 / -1;
-  min-height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  border-style: dashed;
-  text-align: center;
-}
-
-.google-widget-slot:empty::before {
-  content: "Emplacement widget Google Reviews";
 }
 
 .video-embed {
@@ -1115,8 +970,6 @@ textarea {
   .hero,
   .split-section,
   .contact-grid,
-  .reviews-wrap,
-  .youtube-wrap,
   .presentation-section {
     grid-template-columns: 1fr;
   }
@@ -1136,9 +989,7 @@ textarea {
   }
 
   .grid,
-  .photo-grid,
-  .reviews-grid,
-  .video-grid {
+  .photo-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -1156,8 +1007,7 @@ textarea {
   .subnav,
   .footer-inner,
   .presentation-section,
-  .reviews-wrap,
-  .youtube-wrap {
+  .reviews-marquee {
     width: min(100% - 22px, var(--max));
   }
 
@@ -1173,9 +1023,7 @@ textarea {
   .grid,
   .price-grid,
   .photo-grid,
-  .feature-list,
-  .reviews-grid,
-  .video-grid {
+  .feature-list {
     grid-template-columns: 1fr;
   }
 
