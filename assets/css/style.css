@@ -57,11 +57,11 @@ h3 {
 
 h1 {
   max-width: 760px;
-  font-size: clamp(2.1rem, 5vw, 4.35rem);
+  font-size: clamp(1.95rem, 4vw, 3.55rem);
 }
 
 h2 {
-  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  font-size: clamp(1.35rem, 2.35vw, 1.95rem);
 }
 
 h3 {
@@ -208,6 +208,10 @@ h3 {
   gap: 48px;
   min-height: calc(100vh - 116px);
   padding: 48px 0 64px;
+}
+
+.hero.hero-image-large {
+  grid-template-columns: minmax(0, 0.84fr) minmax(420px, 1.16fr);
 }
 
 .eyebrow {
@@ -437,6 +441,10 @@ li {
   padding: 48px 0 78px;
 }
 
+.split-section.media-large {
+  grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1.22fr);
+}
+
 .presentation-section {
   width: min(var(--max), calc(100% - 32px));
   margin: 0 auto;
@@ -579,7 +587,7 @@ li {
 }
 
 .price-card h2 {
-  font-size: 1.28rem;
+  font-size: 1.15rem;
 }
 
 .tag {
@@ -968,7 +976,9 @@ textarea {
 @media (max-width: 900px) {
   .header-inner,
   .hero,
+  .hero.hero-image-large,
   .split-section,
+  .split-section.media-large,
   .contact-grid,
   .presentation-section {
     grid-template-columns: 1fr;
@@ -1036,7 +1046,7 @@ textarea {
   }
 
   h1 {
-    font-size: clamp(1.9rem, 12vw, 2.85rem);
+    font-size: clamp(1.75rem, 10vw, 2.55rem);
   }
 
   .section {
